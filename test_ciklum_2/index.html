@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" media="all and (min-device-width: 1200px)" href="desktop.css">
+    <link rel="stylesheet" media="all and (max-device-width: 1199px)" href="mobile.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Todo-list</h1>
+        <hr>
+    </header>
+    <div class="filter">
+        <input id='search' type="text" placeholder="Search by title">
+        <select name="status" id="status">
+        </select>
+        <select name="priority" id="priority">
+        </select>
+
+        <button id='create-card-btn'>Create</button>
+    </div>
+
+    <div class='modalWindow' id='modalWindow'>
+        <div class='templateLayer' id='templateLayer'>
+            <div id='template' class='template'>
+                <p>Title:</p>
+                <input name='title' id='template-title' class='template-title' type="text" placeholder="Set the title"> <br>
+                <p>Description:</p>
+                <textarea name='description' placeholder="Description"></textarea>
+                <br>
+                <p>Priority:</p>
+                <select name="card-priority">
+                    <option selected value="high">high</option>
+                    <option value="normal">normal</option>
+                    <option value="low">low</option>
+                </select>
+                <div class='templateBtns'>
+                    <button id='cancel'>Cancel</button>
+                    <button id='save'>Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class='container' id='container'></div>
+    </main>
+    <footer>
+        <hr>
+        <p>Dmitry Boltivets</p>
+    </footer>
+    <script src='main.js'></script>
+</body>
+
+</html>

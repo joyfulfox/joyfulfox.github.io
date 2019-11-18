@@ -1,0 +1,456 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #dddddd;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+header h1 {
+  margin: 20px 0 0 5%;
+}
+
+header hr {
+  margin: 20px 0 0 0;
+  background-color: #000;
+}
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 100px 10% 70px 10%;
+}
+
+.filter #search {
+  width: 20%;
+  border-radius: 5px;
+  border: 1px solid #7e7e7e;
+  background: url(img/search.png) no-repeat 2% 45%;
+  background-size: 8%;
+  text-indent: 30px;
+}
+
+.filter #status {
+  text-indent: 5px;
+  width: 10%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(img/downarrow.png) no-repeat 100% 50%;
+  background-size: 25%;
+}
+
+.filter #priority {
+  text-indent: 5px;
+  width: 15%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(img/downarrow.png) no-repeat 100% 50%;
+  background-size: 18%;
+}
+
+.filter #create-card-btn {
+  border: none;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 30px;
+  width: 150px;
+}
+
+.modalWindow {
+  top: 60px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.534);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  font-size: 14px;
+  z-index: 20;
+}
+
+.modalWindow .templateLayer {
+  position: relative;
+  width: 30%;
+  height: 530px;
+  top: 50px;
+  left: 35%;
+  padding: 30px 50px 30px 50px;
+  background: #fff;
+  border: 1px solid #141414;
+}
+
+.modalWindow .templateLayer .template {
+  background: #fff;
+  height: 400px;
+  opacity: 1;
+  text-align: center;
+}
+
+.modalWindow .templateLayer .template .edit-title {
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modalWindow .templateLayer .template p {
+  background: #fff;
+  text-align: left;
+  margin: 15px 0 15px 0;
+}
+
+.modalWindow .templateLayer .template .template-title {
+  background: #fff;
+  font-weight: bold;
+  text-indent: 5px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border: 1px solid #141414;
+}
+
+.modalWindow .templateLayer .template .template-title-error {
+  background: #fff;
+  font-weight: bold;
+  text-indent: 5px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border: 1px solid red;
+}
+
+.modalWindow .templateLayer .template .template-title-error::-webkit-input-placeholder {
+  color: red;
+}
+
+.modalWindow .templateLayer .template .template-title-error:-ms-input-placeholder {
+  color: red;
+}
+
+.modalWindow .templateLayer .template .template-title-error::-ms-input-placeholder {
+  color: red;
+}
+
+.modalWindow .templateLayer .template .template-title-error::placeholder {
+  color: red;
+}
+
+.modalWindow .templateLayer .template textarea {
+  background: #fff;
+  border: none;
+  border: 1px solid #141414;
+  resize: none;
+  text-indent: 5px;
+  width: 100%;
+  height: 100px;
+}
+
+.modalWindow .templateLayer .template .popUp-err {
+  display: block;
+  position: absolute;
+  top: 15%;
+  left: -130px;
+  padding: 5px;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.modalWindow .templateLayer .template select {
+  background: #fff;
+  width: 100%;
+  border: none;
+  border: 1px solid #141414;
+  width: 100%;
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(img/downarrow.png) no-repeat 100% 50%;
+  background-size: 12%;
+  text-indent: 5px;
+}
+
+.modalWindow .templateLayer .template select option {
+  background: #fff;
+}
+
+.modalWindow .templateLayer .template .templateBtns {
+  margin-top: 55px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalWindow .templateLayer .template .templateBtns #cancel {
+  background: #fff;
+  border: none;
+  border: 1px solid #141414;
+  height: 40px;
+  width: 40%;
+  border-radius: 13px;
+}
+
+.modalWindow .templateLayer .template .templateBtns #save {
+  background: #fff;
+  border: none;
+  border: 1px solid #141414;
+  height: 40px;
+  width: 40%;
+  border-radius: 13px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 5% 0 5%;
+}
+
+main .container {
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .container .openCard {
+  display: inline-block;
+  margin: 0 2.5% 50px 2.5%;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  height: 230px;
+  width: 230px;
+  overflow-wrap: break-word;
+  border: 1px solid #000;
+  text-align: left;
+}
+
+main .container .openCard .title {
+  text-indent: 20px;
+  height: 10%;
+  width: 100%;
+  font-weight: bold;
+  margin: 3% 0;
+}
+
+main .container .openCard .title .card-img-status {
+  display: none;
+}
+
+main .container .openCard .description {
+  height: 60%;
+  width: 100%;
+  padding: 3% 0;
+}
+
+main .container .openCard .description p {
+  padding: 0 7%;
+  font-size: 11pt;
+}
+
+main .container .openCard .control-panel {
+  padding: 0 10%;
+  height: 20%;
+}
+
+main .container .openCard .control-panel .priority {
+  float: left;
+  border: 1px dashed #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 70px;
+  text-indent: 10px;
+}
+
+main .container .openCard .control-panel .invoke-buttons {
+  position: relative;
+  border: 1px dashed black;
+  float: right;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+main .container .openCard .control-panel .invoke-buttons:hover .card-buttons {
+  display: block;
+}
+
+main .container .openCard .control-panel .invoke-buttons .card-buttons {
+  display: none;
+  z-index: 15;
+  position: absolute;
+  width: 100px;
+  top: 28px;
+  right: 0px;
+}
+
+main .container .openCard .control-panel .invoke-buttons .card-buttons button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #dddddd;
+  border: none;
+  border: 1px solid #141414;
+}
+
+main .container .openCard .control-panel .invoke-buttons .card-buttons button:hover {
+  background: #fff;
+}
+
+main .container .doneCard {
+  display: inline-block;
+  margin: 0 2.5% 50px 2.5%;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  height: 230px;
+  width: 230px;
+  overflow-wrap: break-word;
+  border: 1px solid #000;
+  text-align: left;
+  background-color: #777777;
+}
+
+main .container .doneCard .title {
+  text-indent: 20px;
+  background-color: #777777;
+  height: 10%;
+  width: 100%;
+  font-weight: bold;
+  margin: 3% 0;
+}
+
+main .container .doneCard .title p {
+  background-color: #777777;
+}
+
+main .container .doneCard .title .card-img-status {
+  position: absolute;
+  top: -5px;
+  right: -4px;
+  background: url(img/done.png) no-repeat 50% 50%;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+}
+
+main .container .doneCard .description {
+  background-color: #777777;
+  height: 60%;
+  width: 100%;
+  padding: 3% 0;
+}
+
+main .container .doneCard .description p {
+  background-color: #777777;
+  padding: 0 7%;
+  font-size: 11pt;
+}
+
+main .container .doneCard .control-panel {
+  background-color: #777777;
+  padding: 0 10%;
+  height: 20%;
+}
+
+main .container .doneCard .control-panel .priority {
+  background-color: #777777;
+  float: left;
+  border: 1px dashed #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 70px;
+  text-indent: 10px;
+}
+
+main .container .doneCard .control-panel .invoke-buttons {
+  position: relative;
+  border: 1px dashed black;
+  background-color: #777777;
+  float: right;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+main .container .doneCard .control-panel .invoke-buttons:hover .card-buttons {
+  display: block;
+}
+
+main .container .doneCard .control-panel .invoke-buttons .card-buttons {
+  display: none;
+  z-index: 15;
+  position: absolute;
+  width: 100px;
+  top: 28px;
+  right: 0px;
+  background-color: #777777;
+}
+
+main .container .doneCard .control-panel .invoke-buttons .card-buttons button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #dddddd;
+  border: none;
+  border: 1px solid #141414;
+  background-color: #777777;
+}
+
+main .container .doneCard .control-panel .invoke-buttons .card-buttons button:hover {
+  background: #aaa;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+footer hr {
+  margin-top: 0;
+  background-color: #000;
+}
+
+footer p {
+  margin: 20px 0 20px 5%;
+}
+/*# sourceMappingURL=desktop.css.map */
