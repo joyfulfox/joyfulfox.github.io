@@ -95,6 +95,7 @@ body .container .toggle-button-day-mode {
   right: 20px;
   top: 170px;
   cursor: pointer;
+  outline: none;
 }
 
 html .container .modalWindowCV,
@@ -381,6 +382,7 @@ body .containerDark .toggle-button-night-mode {
   right: 20px;
   top: 170px;
   cursor: pointer;
+  outline: none;
 }
 
 html .containerDark .modalWindowCV,
