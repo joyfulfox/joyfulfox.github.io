@@ -11,11 +11,11 @@ function followingLink2(){
 }
 
 function firstLink(){
-    return location.href = 'test_ciklum_1/index.html';
+    return location.href = 'todo_list_1/index.html';
 }
 
 function secondLink(){
-    return location.href = 'test_ciklum_2/index.html';
+    return location.href = 'todo_list_2/index.html';
 
 }
 function followingLinkCV(){
