@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000000bb;
+}
+
+.modalWindowCV {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.modalWindowCV .cv-layer {
+  display: -ms-grid;
+  display: grid;
+  width: 80%;
+  height: 80%;
+  margin: 50px auto;
+  background: #e2e2e2;
+  border-radius: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.modalWindowCV .cv-layer h1,
+.modalWindowCV .cv-layer h2,
+.modalWindowCV .cv-layer h3 {
+  line-height: 50px;
+}
+
+.modalWindowCV .cv-layer p,
+.modalWindowCV .cv-layer a {
+  line-height: 25px;
+}
+
+.modalWindowCV .cv-layer span {
+  font-weight: bold;
+}
+
+.modalWindowCV .cv-layer .first-column .text {
+  width: 90%;
+  padding: 0 10px;
+  padding-bottom: 20px;
+}
+
+.modalWindowCV .cv-layer .second-column {
+  background: #747474;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 20px;
+}
+
+.modalWindowCV .cv-layer .second-column .text {
+  width: 90%;
+  padding: 0 10px;
+}
+
+.modalWindowCV .cv-layer .second-column .text a,
+.modalWindowCV .cv-layer .second-column .text h3 {
+  color: #e2e2e2;
+}
+/*# sourceMappingURL=cv_style.css.map */
