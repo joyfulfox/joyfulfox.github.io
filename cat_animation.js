@@ -21,7 +21,7 @@ function walkingCatFunc() {
             card2.style.transform = 'rotate(0deg)';
             validCardsPos = true;
         }
-        setTimeout(() => { document.querySelector(".projects .card1").className = 'card1Active'; }, 780);
+        document.querySelector(".projects .card1").className = 'card1Active';
         setTimeout(() => { clearInterval(walkingInterval), validWalkingCat = true, leftPos = -120; }, 3500);
     }
 }
@@ -40,7 +40,7 @@ function flyingCatFunc() {
             card2.style.transform = 'rotate(0deg)';
             validCardsPos = true;
         }
-        setTimeout(() => { document.querySelector(".projects .card2").className = 'card2Active'; }, 750);
+        document.querySelector(".projects .card2").className = 'card2Active';
         setTimeout(() => { clearInterval(flyingInterval), validFlyingCat = true, rightPos = -120; }, 3500);
     }
 }

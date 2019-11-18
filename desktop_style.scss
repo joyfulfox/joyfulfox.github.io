@@ -267,7 +267,7 @@ body {
                     z-index: 25;
                     position: absolute;
                     top: 295px;
-                    left: 150%;
+                    left: 20%;
                     width: 250px;
                     height: 250px;
                     overflow: hidden;
@@ -275,6 +275,7 @@ body {
                     text-align: center;
                     box-shadow: inset 0 0 0 #000, 1px 1px 10px 3px #0000009a;
                     animation: moveAnimCard1 .87s linear;
+                    animation-delay: .78s;
 
                     @keyframes moveAnimCard1 {
                         0% {
@@ -309,7 +310,7 @@ body {
                     z-index: 25;
                     position: absolute;
                     top: 295px;
-                    right: 150%;
+                    right: 20%;
                     width: 250px;
                     height: 250px;
                     overflow: hidden;
@@ -318,6 +319,7 @@ body {
                     box-shadow: inset 0 0 0 #000, 1px 1px 10px 3px #0000009a;
                     transition: all .5s ease-in-out;
                     animation: moveAnimCard2 .9s linear;
+                    animation-delay: .75s;
 
                     @keyframes moveAnimCard2 {
                         0% {
@@ -589,6 +591,7 @@ body {
                         transition: all .5s ease-in-out;
                         opacity: 1;
                         position: absolute;
+                        color: #fff;
                         font-size: 30px;
                         top: 100px;
                         left: 70px;
@@ -603,6 +606,7 @@ body {
                     }
                 }
 
+
                 .card2 {
                     top: 50%;
                     right: 20%;
@@ -611,6 +615,7 @@ body {
                         transition: all .5s ease-in-out;
                         opacity: 1;
                         position: absolute;
+                        color: #fff;
                         font-size: 30px;
                         top: 100px;
                         left: 70px;
@@ -630,7 +635,7 @@ body {
                     z-index: 25;
                     position: absolute;
                     top: 295px;
-                    left: 150%;
+                    left: 20%;
                     width: 250px;
                     height: 250px;
                     overflow: hidden;
@@ -638,6 +643,7 @@ body {
                     text-align: center;
                     box-shadow: inset 0 0 0 #000, 1px 1px 10px 3px #0000009a;
                     animation: moveAnimCard1 .87s linear;
+                    animation-delay: .78s;
 
                     @keyframes moveAnimCard1 {
                         0% {
@@ -672,7 +678,7 @@ body {
                     z-index: 25;
                     position: absolute;
                     top: 295px;
-                    right: 150%;
+                    right: 20%;
                     width: 250px;
                     height: 250px;
                     overflow: hidden;
@@ -681,6 +687,7 @@ body {
                     box-shadow: inset 0 0 0 #000, 1px 1px 10px 3px #0000009a;
                     transition: all .5s ease-in-out;
                     animation: moveAnimCard2 .9s linear;
+                    animation-delay: .75s;
 
                     @keyframes moveAnimCard2 {
                         0% {

@@ -1,7 +1,7 @@
 var I = {};
 var create = $('create-new-card');
 var search = $('search');
-var popUpErr = $('popUp-err');
+var templateTitle = $('template-title');
 if (getStorage('cards')) {
     var arr = getStorage('cards');
 } else {
@@ -329,9 +329,9 @@ create.onclick = function () {
         setStorage('cards', arr);
         getStorage('cards');
     } else {
-        popUpErr.style.opacity = 1;
+        templateTitle.className = "template-title-err";
         setTimeout(() => {
-            popUpErr.style.opacity = 0;
+            templateTitle.className = "template-title";
         }, 2000);
     }
 };

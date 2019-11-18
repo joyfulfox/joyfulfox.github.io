@@ -178,8 +178,8 @@ body .container main .projects .card2 .click-me {
 
 html .container main .projects .card1Active,
 body .container main .projects .card1Active {
-  -webkit-animation: zoomOutDown1 1s;
-          animation: zoomOutDown1 1s;
+  -webkit-animation: zoomOutDown1 1.8s;
+          animation: zoomOutDown1 1.8s;
   margin: 50px auto;
 }
 
@@ -235,8 +235,8 @@ body .container main .projects .card1Active img {
 
 html .container main .projects .card2Active,
 body .container main .projects .card2Active {
-  -webkit-animation: zoomOutDown2 1s;
-          animation: zoomOutDown2 1s;
+  -webkit-animation: zoomOutDown2 1.8s;
+          animation: zoomOutDown2 1.8s;
   margin: 50px auto;
 }
 
@@ -468,8 +468,8 @@ body .containerDark main .projects .card2 .click-me {
 
 html .containerDark main .projects .card1Active,
 body .containerDark main .projects .card1Active {
-  -webkit-animation: zoomOutDown1 1s;
-          animation: zoomOutDown1 1s;
+  -webkit-animation: zoomOutDown1 1.8s;
+          animation: zoomOutDown1 1.8s;
   margin: 50px auto;
 }
 
@@ -506,8 +506,8 @@ body .containerDark main .projects .card1Active img {
 
 html .containerDark main .projects .card2Active,
 body .containerDark main .projects .card2Active {
-  -webkit-animation: zoomOutDown2 1s;
-          animation: zoomOutDown2 1s;
+  -webkit-animation: zoomOutDown2 1.8s;
+          animation: zoomOutDown2 1.8s;
   margin: 50px auto;
 }
 

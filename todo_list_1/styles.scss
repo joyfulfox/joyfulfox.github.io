@@ -52,11 +52,18 @@ main {
         display: inline-block;
         margin: 0 2.5% 100px 2.5%;
 
-        input {
+        .template-title {
             font-weight: bold;
             width: 100%;
             border: none;
             border-bottom: solid 1px #dad4d4;
+        }
+        .template-title-err{
+            font-weight: bold;
+            width: 100%;
+            border: none;
+            border: solid 2px red;
+            color:red;
         }
 
         .popUp-err {

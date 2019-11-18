@@ -60,11 +60,19 @@ main .template {
   margin: 0 2.5% 100px 2.5%;
 }
 
-main .template input {
+main .template .template-title {
   font-weight: bold;
   width: 100%;
   border: none;
   border-bottom: solid 1px #dad4d4;
+}
+
+main .template .template-title-err {
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  border: solid 2px red;
+  color: red;
 }
 
 main .template .popUp-err {
