@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <head>
+        <h1>Todo-list</h1>
+    </head>
+    <hr>
+    <div class="filter">
+        <input id='search' type="text" placeholder="Search by title">
+        <select name="status" id="status" onchange="statusFilter()">
+            <option name='status-item' value="all" selected>all</option>
+            <option name='status-item' value="open">open</option>
+            <option name='status-item' value="done">done</option>
+        </select>
+        <select name="priority" id="priority" onchange="priorityFilter()">
+            <option name='priority-item' value="all" selected>all</option>
+            <option name='priority-item' value="high">high</option>
+            <option name='priority-item' value="normal">normal</option>
+            <option name='priority-item' value="low">low</option>
+        </select>
+    </div>
+    <hr>
+
+    <main>
+        <div class='template'>
+            <input type="text" placeholder="Title"> <br>
+            <span id='popUp-err' class='popUp-err'>Please fill the title!</span>
+            <textarea placeholder="Description"></textarea>
+            <br>
+            <select name="card-priority">
+                <option selected hidden="true">Priority</option>
+                <option value="high">high</option>
+                <option value="normal">normal</option>
+                <option value="low">low</option>
+            </select>
+        </div>
+
+        <button id='create-new-card'>
+            <span class='span1'>Create</span>
+            <span class='span2'>card</span>
+            <br>
+            <img id='addImg' src="img/add.png" alt="add">
+        </button>
+
+    </main>
+    <script src='main.js'></script>
+</body>
+
+</html>

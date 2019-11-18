@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .container {
+        flex-grow: 1;
+        width: 100%;
+        overflow: hidden;
+        background: #b8b8b8fd;
+        transition: 1s;
+
+        header {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(20deg, #000 25%, #252525);
+            box-shadow: 0px 0px 0px 0px #cfcfcf;
+
+            img {
+                width: 150px;
+                transform: rotate(90deg) translateX(-10px);
+                display: block;
+                float: left;
+            }
+
+            .my-cv {
+                text-align: end;
+                width: 100px;
+                height: 100%;
+                margin: auto 50px auto auto;
+
+                .cv-link-mobile {
+                    position: relative;
+                    width: 300%;
+                    height: 100%;
+                    background: #8f8e8e;
+                    transform: skew(-30deg);
+                    display: inline-block;
+                    font-family: fantasy;
+                    font-size: 30px;
+                    letter-spacing: 5px;
+                    color: #fff;
+                    cursor: pointer;
+
+                    span {
+                        position: absolute;
+                        top: 35%;
+                        left: 10%;
+                        transform: skew(30deg);
+                    }
+                }
+
+                .cv-link {
+                    display: none;
+                }
+            }
+        }
+
+        .toggle-button-day-mode {
+            z-index: 100;
+            width: 60px;
+            height: 30px;
+            background: url(img/toggleButtonOn.png) no-repeat 50%;
+            background-size: cover;
+            position: absolute;
+            right: 20px;
+            top: 170px;
+            cursor: pointer;
+        }
+
+        .modalWindowCV {
+            display: none;
+        }
+
+        main {
+            flex: 1 0 auto;
+            margin: 0 auto 158px;
+            width: 80%;
+            height: 600px;
+            text-align: center;
+            margin-top: 50px;
+            font-family: cursive;
+
+            .projects {
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+
+                .walkingCat {
+                    display: none;
+                }
+
+                .flyingCat {
+                    display: none;
+                }
+
+                .morpheus {
+                    display: none;
+                }
+
+                .card {
+                    width: 100%;
+                    border-radius: 50%;
+                    margin: 0 auto;
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+
+                }
+
+                .card1 {
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+                }
+
+
+                .card2 {
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+                }
+
+
+                .card1Active {
+                    animation: zoomOutDown1 1s;
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+
+                    @keyframes zoomOutDown1 {
+                        40% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                        }
+
+                        to {
+                            opacity: 0;
+                            -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            -webkit-transform-origin: center bottom;
+                            transform-origin: center bottom;
+                            -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                        }
+                    }
+
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .card2Active {
+                    animation: zoomOutDown2 1s;
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+
+                    @keyframes zoomOutDown2 {
+                        40% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                        }
+
+                        to {
+                            opacity: 0;
+                            -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            -webkit-transform-origin: center bottom;
+                            transform-origin: center bottom;
+                            -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                        }
+                    }
+
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        footer {
+            margin-top: 200px;
+            flex: 1 0 auto;
+            width: 100%;
+            height: 150px;
+            background: #000;
+
+            .cat-in-the-wall {
+                display: none;
+            }
+
+        }
+    }
+
+    .containerDark {
+        flex-grow: 1;
+        width: 100%;
+        overflow: hidden;
+        background: #111111fd;
+        color: #cfcfcf;
+        transition: 1s;
+
+        header {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(20deg, #b4b4b4 25%, #252525);
+            box-shadow: 0px 0px 30px 0px #cfcfcf;
+
+            img {
+                width: 150px;
+                transform: rotate(90deg) translateX(-10px);
+                display: block;
+                float: left;
+            }
+
+            .my-cv {
+                text-align: end;
+                width: 100px;
+                height: 100%;
+                margin: auto 50px auto auto;
+
+                .cv-link-mobile {
+                    position: relative;
+                    width: 300%;
+                    height: 100%;
+                    background: #3f3f3f;
+                    transform: skew(-30deg);
+                    display: inline-block;
+                    font-family: fantasy;
+                    font-size: 30px;
+                    letter-spacing: 5px;
+                    color: #fff;
+                    cursor: pointer;
+
+                    span {
+                        position: absolute;
+                        top: 35%;
+                        left: 10%;
+                        transform: skew(30deg);
+                    }
+                }
+
+                .cv-link {
+                    display: none;
+                }
+            }
+        }
+
+        .toggle-button-night-mode {
+            z-index: 100;
+            width: 60px;
+            height: 30px;
+            background: url(img/toggleButtonOff.png) no-repeat 50%;
+            background-size: cover;
+            position: absolute;
+            right: 20px;
+            top: 170px;
+            cursor: pointer;
+        }
+
+        .modalWindowCV {
+            display: none;
+        }
+
+        main {
+            flex: 1 0 auto;
+            margin: 0 auto 158px;
+            width: 80%;
+            height: 600px;
+            text-align: center;
+            margin-top: 50px;
+            font-family: cursive;
+
+            .projects {
+                width: 100%;
+                margin: 0 auto;
+                position: relative;
+
+                .walkingCat {
+                    display: none;
+                }
+
+                .flyingCat {
+                    display: none;
+                }
+
+                .morpheus {
+                    display: none;
+                }
+
+                .card {
+                    width: 100%;
+                    border-radius: 50%;
+                    margin: 0 auto;
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+
+                }
+
+                .card1 {
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+                }
+
+
+                .card2 {
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+                }
+
+
+                .card1Active {
+                    animation: zoomOutDown1 1s;
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+
+                    @keyframes zoomOutDown1 {
+                        40% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                        }
+
+                        to {
+                            opacity: 0;
+                            -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            -webkit-transform-origin: center bottom;
+                            transform-origin: center bottom;
+                            -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                        }
+                    }
+
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .card2Active {
+                    animation: zoomOutDown2 1s;
+                    margin: 50px auto;
+
+                    .click-me {
+                        display: none;
+                    }
+
+                    @keyframes zoomOutDown2 {
+                        40% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                            -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                        }
+
+                        to {
+                            opacity: 0;
+                            -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+                            -webkit-transform-origin: center bottom;
+                            transform-origin: center bottom;
+                            -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                        }
+                    }
+
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        footer {
+            margin-top: 200px;
+            flex: 1 0 auto;
+            width: 100%;
+            height: 150px;
+            background: #000;
+
+            .cat-in-the-wall {
+                display: none;
+            }
+
+        }
+    }
+}

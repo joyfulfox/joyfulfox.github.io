@@ -1,0 +1,371 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  margin-left: 5%;
+}
+
+hr {
+  text-align: center;
+  margin: 10px 12% 10px 12%;
+}
+
+hr:first-of-type {
+  margin: 10px 5.5% 10px 5.5%;
+}
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 10% 0 10%;
+}
+
+.filter #search {
+  width: 20%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #9b9999;
+}
+
+.filter #status {
+  width: 10%;
+}
+
+.filter #priority {
+  width: 15%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 10% 0 10%;
+}
+
+main .template {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 2.5% 100px 2.5%;
+}
+
+main .template input {
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #dad4d4;
+}
+
+main .template .popUp-err {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -160px;
+  padding: 5px;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .template textarea {
+  width: 100%;
+  height: 100px;
+  border: none;
+  z-index: 100;
+  resize: none;
+}
+
+main .template select {
+  width: 100%;
+  border: none;
+}
+
+main .card {
+  display: inline-block;
+  margin: 0 2.5% 50px 2.5%;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  height: 100px;
+  min-width: 150px;
+  max-width: 500px;
+}
+
+main .card .delete {
+  width: 20px;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main .card:hover .delete {
+  visibility: visible;
+  opacity: 1;
+}
+
+main .card .statusDone {
+  border: 0;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #fff), color-stop(10%, #666), color-stop(10%, #fff));
+  background: linear-gradient(90deg, #fff 10%, #666 10% 90%, #fff 10%);
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+main .card .statusDone:focus {
+  outline: 0 !important;
+}
+
+main .card .statusOpen {
+  border: 0;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #666), color-stop(10%, #fff), color-stop(10%, #666));
+  background: linear-gradient(90deg, #666 10%, #fff 10% 90%, #666 10%);
+  color: #000;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+main .card .statusOpen:focus {
+  outline: 0 !important;
+}
+
+main .card input {
+  font-weight: bold;
+  width: 95%;
+  border: none;
+  border-bottom: solid 1px #dad4d4;
+}
+
+main .card input:focus {
+  outline: 0 !important;
+}
+
+main .card img {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+main .card .del-Parent-Div {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20px;
+  height: 65%;
+}
+
+main .card .text-fields-parent-div {
+  width: 150px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .card .text-fields-parent-div:focus {
+  outline: 0 !important;
+}
+
+main .card .text-fields-parent-div .priority-list {
+  position: absolute;
+  text-align: left;
+  left: -1.2em;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+main .card .text-fields-parent-div .priority-list .priority {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  width: 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .card .text-fields-parent-div .priority-list .priority:last-of-type {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+main .card .text-fields-parent-div .priority-list .priority-active {
+  top: 0;
+  width: 20px;
+  z-index: 100;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .card .text-fields-parent-div .priority-list:hover .priority {
+  -webkit-animation: priorityIcons 1s;
+          animation: priorityIcons 1s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+@-webkit-keyframes priorityIcons {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes priorityIcons {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+main .card .oldSize {
+  border: none;
+  width: 150px;
+  height: 50px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  resize: none;
+  overflow: hidden;
+}
+
+main .card .newSize {
+  border: none;
+  width: 100%;
+  height: 100px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  resize: none;
+}
+
+main .card .newSize::-webkit-scrollbar {
+  width: 0;
+}
+
+main .card .newSize:focus {
+  outline: 0 !important;
+}
+
+.deleteAnimation {
+  width: 150px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 2.5% 50px 2.5%;
+  text-align: center;
+  position: relative;
+  opacity: 1;
+  -webkit-animation: delAnim 2s;
+          animation: delAnim 2s;
+}
+
+@-webkit-keyframes delAnim {
+  0% {
+    opacity: 1;
+    left: 0;
+  }
+  30% {
+    opacity: 0;
+    left: -10px;
+  }
+  100% {
+    opacity: 0;
+    left: -150px;
+  }
+}
+
+@keyframes delAnim {
+  0% {
+    opacity: 1;
+    left: 0;
+  }
+  30% {
+    opacity: 0;
+    left: -10px;
+  }
+  100% {
+    opacity: 0;
+    left: -150px;
+  }
+}
+
+#create-new-card {
+  border-radius: 5px;
+  position: relative;
+  border: none;
+  height: 125px;
+  background: #fff;
+  position: relative;
+}
+
+#create-new-card:focus {
+  outline: 0 !important;
+}
+
+#create-new-card img {
+  width: 80px;
+  -webkit-transition: 2s;
+  transition: 2s;
+  z-index: 1;
+}
+
+#create-new-card .span1 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 5;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#create-new-card .span2 {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  z-index: 5;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+/*# sourceMappingURL=styles.css.map */

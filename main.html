@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JoyfulFox Portfolio</title>
+    <link rel="stylesheet" media="all and (min-device-width:1200px)" href="desktop_style.css">
+    <link rel="stylesheet" media="all and (max-device-width:1199px)" href="mobile_style.css">
+</head>
+
+<body>
+    <div class="container" id='container'>
+
+        <header>
+            <img src="img/cat1.png" alt="some cat" id='whiteCat'>
+            <div class='my-cv'>
+                <div class='cv-link'><span>My CV</span></div>
+                <div class='cv-link-mobile'><span>My CV</span></div>
+            </div>
+        </header>
+        <div class="toggle-button-day-mode" id='toggle-button-day-mode'></div>
+        <div class="modalWindowCV">
+            <div class="cv-layer">
+                <div class="first-column">
+                    <div class="text">
+                        <h3>Contact</h3>
+                        <p>dmitryboltivets@gmail.com</p>
+                        <p>www.linkedin.com/in/dmitry-boltivets-4bb512192 (LinkedIn)</p>
+                        <h3>Top Skills</h3>
+                        <p>HTML5 <br>
+                            CSS3 <br>
+                            JavaScript</p>
+                        <h3>Languages</h3>
+                        <p>English(Limited Working) <br>
+                            Ukrainian(Native) <br>
+                            Russian(Native)</p>
+                        <h3>Certifications</h3>
+                        <a href="https://drive.google.com/open?id=12ehlj7ceabaYoG9ve_eVQipXntgoBW9S">Frontend
+                            Developer</a>
+                    </div>
+                </div>
+                <div class="second-column">
+                    <div class="text">
+
+                        <h1>Dmitry Boltivets</h1>
+                        <p>Kiev 26 years <span>&#149;</span> Male</p>
+                        <h2>Experience</h2>
+                        <p>Tantiema Kyiv Factory of Artistic Forging <br>
+                            Mechanical Engineer <br>
+                            August 2018 - February 2019 (7 months) <br>
+                            Design of metal construction. Experience with CAD System.</p>
+                        <h2>Education</h2>
+                        <p>National Technical University of Ukraine "Kyiv Polytechnic Institute" <br>
+                            Master's degree, Mechanical Engineering · (2011 - 2017)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <h1>Sorry about interface...</h1>
+            <h2>The page is undergoing technical work! <br>
+                But you still can see my projects. </h2>
+            <div class="projects">
+                <div class="walkingCats">
+                    <div class="walkingCat"></div>
+                    <div class="walkingCat1"></div>
+                </div>
+                <div class="flyingCats">
+                    <div class="flyingCat"></div>
+                    <div class="flyingCat1"></div>
+                </div>
+                <img src="img/morpheus.png" class='morpheus' alt="morpheus">
+                <div class="card card1" id='first-card-morph'>
+                    <p class='click-me'>Click me!</p>
+                    <img src="img/first-card.jpg">
+                </div>
+                <div class="card card2" id='second-card-morph'>
+                    <p class='click-me'>Click me!</p>
+                    <img src="img/second-card.jpg">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="cat-in-the-wall">
+                <img src="img/cat2.png" alt="some cat">
+            </div>
+        </footer>
+    </div>
+
+    <script src='cat_animation.js'></script>
+    <script src='links.js'></script>
+    <script src='cv.js'></script>
+    <script src='dark_mode.js'></script>
+</body>
+
+</html>

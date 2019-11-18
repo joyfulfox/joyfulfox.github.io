@@ -1,0 +1,551 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+html .container,
+body .container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+  background: #b8b8b8fd;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html .container header,
+body .container header {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(20deg, #000 25%, #252525);
+  -webkit-box-shadow: 0px 0px 0px 0px #cfcfcf;
+          box-shadow: 0px 0px 0px 0px #cfcfcf;
+}
+
+html .container header img,
+body .container header img {
+  width: 150px;
+  -webkit-transform: rotate(90deg) translateX(-10px);
+          transform: rotate(90deg) translateX(-10px);
+  display: block;
+  float: left;
+}
+
+html .container header .my-cv,
+body .container header .my-cv {
+  text-align: end;
+  width: 100px;
+  height: 100%;
+  margin: auto 50px auto auto;
+}
+
+html .container header .my-cv .cv-link-mobile,
+body .container header .my-cv .cv-link-mobile {
+  position: relative;
+  width: 300%;
+  height: 100%;
+  background: #8f8e8e;
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
+  display: inline-block;
+  font-family: fantasy;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+html .container header .my-cv .cv-link-mobile span,
+body .container header .my-cv .cv-link-mobile span {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+}
+
+html .container header .my-cv .cv-link,
+body .container header .my-cv .cv-link {
+  display: none;
+}
+
+html .container .toggle-button-day-mode,
+body .container .toggle-button-day-mode {
+  z-index: 100;
+  width: 60px;
+  height: 30px;
+  background: url(img/toggleButtonOn.png) no-repeat 50%;
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+  top: 170px;
+  cursor: pointer;
+}
+
+html .container .modalWindowCV,
+body .container .modalWindowCV {
+  display: none;
+}
+
+html .container main,
+body .container main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin: 0 auto 158px;
+  width: 80%;
+  height: 600px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: cursive;
+}
+
+html .container main .projects,
+body .container main .projects {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+html .container main .projects .walkingCat,
+body .container main .projects .walkingCat {
+  display: none;
+}
+
+html .container main .projects .flyingCat,
+body .container main .projects .flyingCat {
+  display: none;
+}
+
+html .container main .projects .morpheus,
+body .container main .projects .morpheus {
+  display: none;
+}
+
+html .container main .projects .card,
+body .container main .projects .card {
+  width: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+html .container main .projects .card img,
+body .container main .projects .card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+html .container main .projects .card1,
+body .container main .projects .card1 {
+  margin: 50px auto;
+}
+
+html .container main .projects .card1 .click-me,
+body .container main .projects .card1 .click-me {
+  display: none;
+}
+
+html .container main .projects .card2,
+body .container main .projects .card2 {
+  margin: 50px auto;
+}
+
+html .container main .projects .card2 .click-me,
+body .container main .projects .card2 .click-me {
+  display: none;
+}
+
+html .container main .projects .card1Active,
+body .container main .projects .card1Active {
+  -webkit-animation: zoomOutDown1 1s;
+          animation: zoomOutDown1 1s;
+  margin: 50px auto;
+}
+
+html .container main .projects .card1Active .click-me,
+body .container main .projects .card1Active .click-me {
+  display: none;
+}
+
+@-webkit-keyframes zoomOutDown1 {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomOutDown1 {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+html .container main .projects .card1Active img,
+body .container main .projects .card1Active img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+html .container main .projects .card2Active,
+body .container main .projects .card2Active {
+  -webkit-animation: zoomOutDown2 1s;
+          animation: zoomOutDown2 1s;
+  margin: 50px auto;
+}
+
+html .container main .projects .card2Active .click-me,
+body .container main .projects .card2Active .click-me {
+  display: none;
+}
+
+@-webkit-keyframes zoomOutDown2 {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomOutDown2 {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+html .container main .projects .card2Active img,
+body .container main .projects .card2Active img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+html .container footer,
+body .container footer {
+  margin-top: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 100%;
+  height: 150px;
+  background: #000;
+}
+
+html .container footer .cat-in-the-wall,
+body .container footer .cat-in-the-wall {
+  display: none;
+}
+
+html .containerDark,
+body .containerDark {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+  background: #111111fd;
+  color: #cfcfcf;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html .containerDark header,
+body .containerDark header {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(20deg, #b4b4b4 25%, #252525);
+  -webkit-box-shadow: 0px 0px 30px 0px #cfcfcf;
+          box-shadow: 0px 0px 30px 0px #cfcfcf;
+}
+
+html .containerDark header img,
+body .containerDark header img {
+  width: 150px;
+  -webkit-transform: rotate(90deg) translateX(-10px);
+          transform: rotate(90deg) translateX(-10px);
+  display: block;
+  float: left;
+}
+
+html .containerDark header .my-cv,
+body .containerDark header .my-cv {
+  text-align: end;
+  width: 100px;
+  height: 100%;
+  margin: auto 50px auto auto;
+}
+
+html .containerDark header .my-cv .cv-link-mobile,
+body .containerDark header .my-cv .cv-link-mobile {
+  position: relative;
+  width: 300%;
+  height: 100%;
+  background: #3f3f3f;
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
+  display: inline-block;
+  font-family: fantasy;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+html .containerDark header .my-cv .cv-link-mobile span,
+body .containerDark header .my-cv .cv-link-mobile span {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+}
+
+html .containerDark header .my-cv .cv-link,
+body .containerDark header .my-cv .cv-link {
+  display: none;
+}
+
+html .containerDark .toggle-button-night-mode,
+body .containerDark .toggle-button-night-mode {
+  z-index: 100;
+  width: 60px;
+  height: 30px;
+  background: url(img/toggleButtonOff.png) no-repeat 50%;
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+  top: 170px;
+  cursor: pointer;
+}
+
+html .containerDark .modalWindowCV,
+body .containerDark .modalWindowCV {
+  display: none;
+}
+
+html .containerDark main,
+body .containerDark main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin: 0 auto 158px;
+  width: 80%;
+  height: 600px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: cursive;
+}
+
+html .containerDark main .projects,
+body .containerDark main .projects {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+html .containerDark main .projects .walkingCat,
+body .containerDark main .projects .walkingCat {
+  display: none;
+}
+
+html .containerDark main .projects .flyingCat,
+body .containerDark main .projects .flyingCat {
+  display: none;
+}
+
+html .containerDark main .projects .morpheus,
+body .containerDark main .projects .morpheus {
+  display: none;
+}
+
+html .containerDark main .projects .card,
+body .containerDark main .projects .card {
+  width: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+html .containerDark main .projects .card img,
+body .containerDark main .projects .card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+html .containerDark main .projects .card1,
+body .containerDark main .projects .card1 {
+  margin: 50px auto;
+}
+
+html .containerDark main .projects .card1 .click-me,
+body .containerDark main .projects .card1 .click-me {
+  display: none;
+}
+
+html .containerDark main .projects .card2,
+body .containerDark main .projects .card2 {
+  margin: 50px auto;
+}
+
+html .containerDark main .projects .card2 .click-me,
+body .containerDark main .projects .card2 .click-me {
+  display: none;
+}
+
+html .containerDark main .projects .card1Active,
+body .containerDark main .projects .card1Active {
+  -webkit-animation: zoomOutDown1 1s;
+          animation: zoomOutDown1 1s;
+  margin: 50px auto;
+}
+
+html .containerDark main .projects .card1Active .click-me,
+body .containerDark main .projects .card1Active .click-me {
+  display: none;
+}
+
+@keyframes zoomOutDown1 {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+html .containerDark main .projects .card1Active img,
+body .containerDark main .projects .card1Active img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+html .containerDark main .projects .card2Active,
+body .containerDark main .projects .card2Active {
+  -webkit-animation: zoomOutDown2 1s;
+          animation: zoomOutDown2 1s;
+  margin: 50px auto;
+}
+
+html .containerDark main .projects .card2Active .click-me,
+body .containerDark main .projects .card2Active .click-me {
+  display: none;
+}
+
+@keyframes zoomOutDown2 {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+html .containerDark main .projects .card2Active img,
+body .containerDark main .projects .card2Active img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+html .containerDark footer,
+body .containerDark footer {
+  margin-top: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 100%;
+  height: 150px;
+  background: #000;
+}
+
+html .containerDark footer .cat-in-the-wall,
+body .containerDark footer .cat-in-the-wall {
+  display: none;
+}
+/*# sourceMappingURL=mobile_style.css.map */
