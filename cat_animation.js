@@ -14,14 +14,15 @@ function walkingCatFunc() {
     if (validWalkingCat == true) {
         let walkingInterval = setInterval(walking, 10);
         validWalkingCat = false;
+        document.querySelector(".projects .card1").className = 'card1Active';
         if (validCardsPos == false) {
-            card1.style.left = 20 + '%';
-            card1.style.transform = 'rotate(0deg)';
+            document.querySelector('.card1Active').style.transition = 'all .5s ease-in-out';
+            document.querySelector('.card1Active').style.left = 20 + '%';
+            document.querySelector('.card1Active').style.transform = 'rotate(0deg)';
             card2.style.right = 20 + '%';
             card2.style.transform = 'rotate(0deg)';
             validCardsPos = true;
         }
-        document.querySelector(".projects .card1").className = 'card1Active';
         setTimeout(() => { clearInterval(walkingInterval), validWalkingCat = true, leftPos = -120; }, 3500);
     }
 }
@@ -33,14 +34,14 @@ function flyingCatFunc() {
     if (validFlyingCat == true) {
         let flyingInterval = setInterval(flying, 10);
         validFlyingCat = false;
+        document.querySelector(".projects .card2").className = 'card2Active';
         if (validCardsPos == false) {
             card1.style.left = 20 + '%';
             card1.style.transform = 'rotate(0deg)';
-            card2.style.right = 20 + '%';
-            card2.style.transform = 'rotate(0deg)';
+            document.querySelector('.card2Active').style.right = 20 + '%';
+            document.querySelector('.card2Active').style.transform = 'rotate(0deg)';
             validCardsPos = true;
         }
-        document.querySelector(".projects .card2").className = 'card2Active';
         setTimeout(() => { clearInterval(flyingInterval), validFlyingCat = true, rightPos = -120; }, 3500);
     }
 }
