@@ -95,7 +95,11 @@ body .container .toggle-button-day-mode {
   right: 20px;
   top: 170px;
   cursor: pointer;
-  outline: none;
+  -ms-user-select: none;
+      user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html .container .modalWindowCV,
@@ -383,6 +387,9 @@ body .containerDark .toggle-button-night-mode {
   top: 170px;
   cursor: pointer;
   outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html .containerDark .modalWindowCV,
