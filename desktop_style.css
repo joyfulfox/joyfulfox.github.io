@@ -5,30 +5,32 @@
           box-sizing: border-box;
 }
 
-html,
+html {
+  height: 100%;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
-html .container,
 body .container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   width: 100%;
   overflow: hidden;
   background: #b8b8b8fd;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
-html .container header,
 body .container header {
   width: 100%;
   height: 150px;
@@ -37,7 +39,6 @@ body .container header {
           box-shadow: 0px 0px 0px 0px #cfcfcf;
 }
 
-html .container header #whiteCat,
 body .container header #whiteCat {
   width: 150px;
   -webkit-transform: rotate(90deg) translateX(-10px);
@@ -46,7 +47,6 @@ body .container header #whiteCat {
   float: left;
 }
 
-html .container header .my-cv,
 body .container header .my-cv {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
@@ -56,7 +56,6 @@ body .container header .my-cv {
   margin: auto 50px auto auto;
 }
 
-html .container header .my-cv .cv-link,
 body .container header .my-cv .cv-link {
   position: relative;
   width: 100%;
@@ -74,7 +73,6 @@ body .container header .my-cv .cv-link {
   cursor: pointer;
 }
 
-html .container header .my-cv .cv-link span,
 body .container header .my-cv .cv-link span {
   position: absolute;
   top: 15%;
@@ -83,12 +81,10 @@ body .container header .my-cv .cv-link span {
           transform: skew(30deg);
 }
 
-html .container header .my-cv .cv-link-mobile,
 body .container header .my-cv .cv-link-mobile {
   display: none;
 }
 
-html .container .toggle-button-day-mode,
 body .container .toggle-button-day-mode {
   width: 60px;
   height: 30px;
@@ -100,7 +96,6 @@ body .container .toggle-button-day-mode {
   cursor: pointer;
 }
 
-html .container .modalWindowCV,
 body .container .modalWindowCV {
   z-index: 99;
   display: none;
@@ -112,7 +107,6 @@ body .container .modalWindowCV {
   background: #000000bb;
 }
 
-html .container .modalWindowCV .cv-layer,
 body .container .modalWindowCV .cv-layer {
   display: -ms-grid;
   display: grid;
@@ -127,28 +121,21 @@ body .container .modalWindowCV .cv-layer {
   letter-spacing: 1px;
 }
 
-html .container .modalWindowCV .cv-layer h1,
-html .container .modalWindowCV .cv-layer h2,
-html .container .modalWindowCV .cv-layer h3,
 body .container .modalWindowCV .cv-layer h1,
 body .container .modalWindowCV .cv-layer h2,
 body .container .modalWindowCV .cv-layer h3 {
   line-height: 50px;
 }
 
-html .container .modalWindowCV .cv-layer p,
-html .container .modalWindowCV .cv-layer a,
 body .container .modalWindowCV .cv-layer p,
 body .container .modalWindowCV .cv-layer a {
   line-height: 25px;
 }
 
-html .container .modalWindowCV .cv-layer span,
 body .container .modalWindowCV .cv-layer span {
   font-weight: bold;
 }
 
-html .container .modalWindowCV .cv-layer .first-column,
 body .container .modalWindowCV .cv-layer .first-column {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -157,33 +144,27 @@ body .container .modalWindowCV .cv-layer .first-column {
   background: #747474;
 }
 
-html .container .modalWindowCV .cv-layer .first-column .text,
 body .container .modalWindowCV .cv-layer .first-column .text {
   width: 90%;
   margin: 20px 0 0 30px;
 }
 
-html .container .modalWindowCV .cv-layer .first-column .text a,
-html .container .modalWindowCV .cv-layer .first-column .text h3,
 body .container .modalWindowCV .cv-layer .first-column .text a,
 body .container .modalWindowCV .cv-layer .first-column .text h3 {
   color: #e2e2e2;
 }
 
-html .container .modalWindowCV .cv-layer .second-column,
 body .container .modalWindowCV .cv-layer .second-column {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
-html .container .modalWindowCV .cv-layer .second-column .text,
 body .container .modalWindowCV .cv-layer .second-column .text {
   width: 90%;
   margin: 20px 0 0 30px;
 }
 
-html .container main,
 body .container main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -196,7 +177,6 @@ body .container main {
   font-family: cursive;
 }
 
-html .container main .projects,
 body .container main .projects {
   height: 100%;
   width: 1200px;
@@ -204,7 +184,6 @@ body .container main .projects {
   position: relative;
 }
 
-html .container main .projects .walkingCat,
 body .container main .projects .walkingCat {
   position: absolute;
   height: 500px;
@@ -216,7 +195,6 @@ body .container main .projects .walkingCat {
   background-size: cover;
 }
 
-html .container main .projects .flyingCat,
 body .container main .projects .flyingCat {
   position: absolute;
   height: 200px;
@@ -228,7 +206,6 @@ body .container main .projects .flyingCat {
   background-size: cover;
 }
 
-html .container main .projects .morpheus,
 body .container main .projects .morpheus {
   -webkit-transform: rotate(0.35deg);
           transform: rotate(0.35deg);
@@ -237,7 +214,6 @@ body .container main .projects .morpheus {
   width: 63%;
 }
 
-html .container main .projects .card,
 body .container main .projects .card {
   position: absolute;
   width: 250px;
@@ -252,7 +228,6 @@ body .container main .projects .card {
   transition: all .5s ease-in-out;
 }
 
-html .container main .projects .card:hover,
 body .container main .projects .card:hover {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -260,7 +235,6 @@ body .container main .projects .card:hover {
           box-shadow: inset 0 0 0 #000, 1px 1px 10px 3px #0000009a;
 }
 
-html .container main .projects .card:hover img,
 body .container main .projects .card:hover img {
   -webkit-transform: translate(0);
           transform: translate(0);
@@ -270,21 +244,18 @@ body .container main .projects .card:hover img {
   height: 250px;
 }
 
-html .container main .projects .card:hover .click-me,
 body .container main .projects .card:hover .click-me {
   opacity: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
-html .container main .projects .card1,
 body .container main .projects .card1 {
   position: absolute;
   top: 50%;
   left: 20%;
 }
 
-html .container main .projects .card1 .click-me,
 body .container main .projects .card1 .click-me {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -296,7 +267,6 @@ body .container main .projects .card1 .click-me {
   left: 70px;
 }
 
-html .container main .projects .card1 img,
 body .container main .projects .card1 img {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
@@ -307,13 +277,11 @@ body .container main .projects .card1 img {
   border-radius: 50%;
 }
 
-html .container main .projects .card2,
 body .container main .projects .card2 {
   top: 50%;
   right: 20%;
 }
 
-html .container main .projects .card2 .click-me,
 body .container main .projects .card2 .click-me {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -325,7 +293,6 @@ body .container main .projects .card2 .click-me {
   left: 70px;
 }
 
-html .container main .projects .card2 img,
 body .container main .projects .card2 img {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
@@ -336,7 +303,6 @@ body .container main .projects .card2 img {
   border-radius: 50%;
 }
 
-html .container main .projects .card1Active,
 body .container main .projects .card1Active {
   z-index: 25;
   position: absolute;
@@ -381,7 +347,6 @@ body .container main .projects .card1Active {
   }
 }
 
-html .container main .projects .card1Active .click-me,
 body .container main .projects .card1Active .click-me {
   opacity: 1;
   position: absolute;
@@ -391,7 +356,6 @@ body .container main .projects .card1Active .click-me {
   left: 70px;
 }
 
-html .container main .projects .card1Active img,
 body .container main .projects .card1Active img {
   -webkit-transform: translate(0);
           transform: translate(0);
@@ -400,7 +364,6 @@ body .container main .projects .card1Active img {
   border-radius: 50%;
 }
 
-html .container main .projects .card2Active,
 body .container main .projects .card2Active {
   z-index: 25;
   position: absolute;
@@ -447,7 +410,6 @@ body .container main .projects .card2Active {
   }
 }
 
-html .container main .projects .card2Active .click-me,
 body .container main .projects .card2Active .click-me {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -459,7 +421,6 @@ body .container main .projects .card2Active .click-me {
   left: 70px;
 }
 
-html .container main .projects .card2Active img,
 body .container main .projects .card2Active img {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -470,12 +431,10 @@ body .container main .projects .card2Active img {
   border-radius: 50%;
 }
 
-html .container footer,
-body .container footer {
-  margin-top: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+body footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,31 +446,27 @@ body .container footer {
           align-items: center;
 }
 
-html .container footer .cat-in-the-wall,
-body .container footer .cat-in-the-wall {
+body footer .cat-in-the-wall {
   cursor: pointer;
 }
 
-html .container footer .cat-in-the-wall img,
-body .container footer .cat-in-the-wall img {
+body footer .cat-in-the-wall img {
   margin-left: 50px;
   width: 200px;
 }
 
-html .containerDark,
 body .containerDark {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   width: 100%;
   overflow: hidden;
   background: #111111fd;
   color: #cfcfcf;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
-html .containerDark header,
 body .containerDark header {
   width: 100%;
   height: 150px;
@@ -520,7 +475,6 @@ body .containerDark header {
           box-shadow: 0px 0px 30px 0px #cfcfcf;
 }
 
-html .containerDark header #whiteCat,
 body .containerDark header #whiteCat {
   width: 150px;
   -webkit-transform: rotate(90deg) translateX(-10px);
@@ -529,7 +483,6 @@ body .containerDark header #whiteCat {
   float: left;
 }
 
-html .containerDark header .my-cv,
 body .containerDark header .my-cv {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
@@ -539,7 +492,6 @@ body .containerDark header .my-cv {
   margin: auto 50px auto auto;
 }
 
-html .containerDark header .my-cv .cv-link,
 body .containerDark header .my-cv .cv-link {
   position: relative;
   width: 100%;
@@ -557,7 +509,6 @@ body .containerDark header .my-cv .cv-link {
   cursor: pointer;
 }
 
-html .containerDark header .my-cv .cv-link span,
 body .containerDark header .my-cv .cv-link span {
   position: absolute;
   top: 15%;
@@ -566,12 +517,10 @@ body .containerDark header .my-cv .cv-link span {
           transform: skew(30deg);
 }
 
-html .containerDark header .my-cv .cv-link-mobile,
 body .containerDark header .my-cv .cv-link-mobile {
   display: none;
 }
 
-html .containerDark .toggle-button-night-mode,
 body .containerDark .toggle-button-night-mode {
   width: 60px;
   height: 30px;
@@ -583,7 +532,6 @@ body .containerDark .toggle-button-night-mode {
   cursor: pointer;
 }
 
-html .containerDark .modalWindowCV,
 body .containerDark .modalWindowCV {
   z-index: 99;
   display: none;
@@ -596,7 +544,6 @@ body .containerDark .modalWindowCV {
   color: #181818;
 }
 
-html .containerDark .modalWindowCV .cv-layer,
 body .containerDark .modalWindowCV .cv-layer {
   display: -ms-grid;
   display: grid;
@@ -611,28 +558,21 @@ body .containerDark .modalWindowCV .cv-layer {
   letter-spacing: 1px;
 }
 
-html .containerDark .modalWindowCV .cv-layer h1,
-html .containerDark .modalWindowCV .cv-layer h2,
-html .containerDark .modalWindowCV .cv-layer h3,
 body .containerDark .modalWindowCV .cv-layer h1,
 body .containerDark .modalWindowCV .cv-layer h2,
 body .containerDark .modalWindowCV .cv-layer h3 {
   line-height: 50px;
 }
 
-html .containerDark .modalWindowCV .cv-layer p,
-html .containerDark .modalWindowCV .cv-layer a,
 body .containerDark .modalWindowCV .cv-layer p,
 body .containerDark .modalWindowCV .cv-layer a {
   line-height: 25px;
 }
 
-html .containerDark .modalWindowCV .cv-layer span,
 body .containerDark .modalWindowCV .cv-layer span {
   font-weight: bold;
 }
 
-html .containerDark .modalWindowCV .cv-layer .first-column,
 body .containerDark .modalWindowCV .cv-layer .first-column {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -641,33 +581,27 @@ body .containerDark .modalWindowCV .cv-layer .first-column {
   background: #747474;
 }
 
-html .containerDark .modalWindowCV .cv-layer .first-column .text,
 body .containerDark .modalWindowCV .cv-layer .first-column .text {
   width: 90%;
   margin: 20px 0 0 30px;
 }
 
-html .containerDark .modalWindowCV .cv-layer .first-column .text a,
-html .containerDark .modalWindowCV .cv-layer .first-column .text h3,
 body .containerDark .modalWindowCV .cv-layer .first-column .text a,
 body .containerDark .modalWindowCV .cv-layer .first-column .text h3 {
   color: #e2e2e2;
 }
 
-html .containerDark .modalWindowCV .cv-layer .second-column,
 body .containerDark .modalWindowCV .cv-layer .second-column {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
-html .containerDark .modalWindowCV .cv-layer .second-column .text,
 body .containerDark .modalWindowCV .cv-layer .second-column .text {
   width: 90%;
   margin: 20px 0 0 30px;
 }
 
-html .containerDark main,
 body .containerDark main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -680,7 +614,6 @@ body .containerDark main {
   font-family: cursive;
 }
 
-html .containerDark main .projects,
 body .containerDark main .projects {
   height: 100%;
   width: 1200px;
@@ -688,7 +621,6 @@ body .containerDark main .projects {
   position: relative;
 }
 
-html .containerDark main .projects .walkingCat,
 body .containerDark main .projects .walkingCat {
   position: absolute;
   height: 500px;
@@ -700,7 +632,6 @@ body .containerDark main .projects .walkingCat {
   background-size: cover;
 }
 
-html .containerDark main .projects .flyingCat,
 body .containerDark main .projects .flyingCat {
   position: absolute;
   height: 200px;
@@ -712,7 +643,6 @@ body .containerDark main .projects .flyingCat {
   background-size: cover;
 }
 
-html .containerDark main .projects .morpheus,
 body .containerDark main .projects .morpheus {
   -webkit-transform: rotate(0.35deg);
           transform: rotate(0.35deg);
@@ -721,7 +651,6 @@ body .containerDark main .projects .morpheus {
   width: 63%;
 }
 
-html .containerDark main .projects .card,
 body .containerDark main .projects .card {
   position: absolute;
   width: 250px;
@@ -736,7 +665,6 @@ body .containerDark main .projects .card {
   transition: all .5s ease-in-out;
 }
 
-html .containerDark main .projects .card:hover,
 body .containerDark main .projects .card:hover {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -744,7 +672,6 @@ body .containerDark main .projects .card:hover {
           box-shadow: inset 0 0 0 #000, 1px 1px 10px 3px #0000009a;
 }
 
-html .containerDark main .projects .card:hover img,
 body .containerDark main .projects .card:hover img {
   -webkit-transform: translate(0);
           transform: translate(0);
@@ -754,21 +681,18 @@ body .containerDark main .projects .card:hover img {
   height: 250px;
 }
 
-html .containerDark main .projects .card:hover .click-me,
 body .containerDark main .projects .card:hover .click-me {
   opacity: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
-html .containerDark main .projects .card1,
 body .containerDark main .projects .card1 {
   position: absolute;
   top: 50%;
   left: 20%;
 }
 
-html .containerDark main .projects .card1 .click-me,
 body .containerDark main .projects .card1 .click-me {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -780,7 +704,6 @@ body .containerDark main .projects .card1 .click-me {
   left: 70px;
 }
 
-html .containerDark main .projects .card1 img,
 body .containerDark main .projects .card1 img {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
@@ -791,13 +714,11 @@ body .containerDark main .projects .card1 img {
   border-radius: 50%;
 }
 
-html .containerDark main .projects .card2,
 body .containerDark main .projects .card2 {
   top: 50%;
   right: 20%;
 }
 
-html .containerDark main .projects .card2 .click-me,
 body .containerDark main .projects .card2 .click-me {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -809,7 +730,6 @@ body .containerDark main .projects .card2 .click-me {
   left: 70px;
 }
 
-html .containerDark main .projects .card2 img,
 body .containerDark main .projects .card2 img {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
@@ -820,7 +740,6 @@ body .containerDark main .projects .card2 img {
   border-radius: 50%;
 }
 
-html .containerDark main .projects .card1Active,
 body .containerDark main .projects .card1Active {
   z-index: 25;
   position: absolute;
@@ -852,7 +771,6 @@ body .containerDark main .projects .card1Active {
   }
 }
 
-html .containerDark main .projects .card1Active .click-me,
 body .containerDark main .projects .card1Active .click-me {
   opacity: 1;
   position: absolute;
@@ -862,7 +780,6 @@ body .containerDark main .projects .card1Active .click-me {
   left: 70px;
 }
 
-html .containerDark main .projects .card1Active img,
 body .containerDark main .projects .card1Active img {
   -webkit-transform: translate(0);
           transform: translate(0);
@@ -871,7 +788,6 @@ body .containerDark main .projects .card1Active img {
   border-radius: 50%;
 }
 
-html .containerDark main .projects .card2Active,
 body .containerDark main .projects .card2Active {
   z-index: 25;
   position: absolute;
@@ -905,7 +821,6 @@ body .containerDark main .projects .card2Active {
   }
 }
 
-html .containerDark main .projects .card2Active .click-me,
 body .containerDark main .projects .card2Active .click-me {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -917,7 +832,6 @@ body .containerDark main .projects .card2Active .click-me {
   left: 70px;
 }
 
-html .containerDark main .projects .card2Active img,
 body .containerDark main .projects .card2Active img {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -928,12 +842,10 @@ body .containerDark main .projects .card2Active img {
   border-radius: 50%;
 }
 
-html .containerDark footer,
-body .containerDark footer {
-  margin-top: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+body footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -945,13 +857,11 @@ body .containerDark footer {
           align-items: center;
 }
 
-html .containerDark footer .cat-in-the-wall,
-body .containerDark footer .cat-in-the-wall {
+body footer .cat-in-the-wall {
   cursor: pointer;
 }
 
-html .containerDark footer .cat-in-the-wall img,
-body .containerDark footer .cat-in-the-wall img {
+body footer .cat-in-the-wall img {
   margin-left: 50px;
   width: 200px;
 }

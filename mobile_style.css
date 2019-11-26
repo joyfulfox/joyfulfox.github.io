@@ -5,28 +5,32 @@
           box-sizing: border-box;
 }
 
-html,
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-html .container,
 body .container {
   width: 100%;
-  min-height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   overflow: hidden;
   background: #b8b8b8fd;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-html .container header,
 body .container header {
   width: 100%;
   height: 150px;
@@ -35,7 +39,6 @@ body .container header {
           box-shadow: 0px 0px 0px 0px #cfcfcf;
 }
 
-html .container header img,
 body .container header img {
   width: 150px;
   -webkit-transform: rotate(90deg) translateX(-10px);
@@ -44,7 +47,6 @@ body .container header img {
   float: left;
 }
 
-html .container header .my-cv,
 body .container header .my-cv {
   text-align: end;
   width: 100px;
@@ -52,7 +54,6 @@ body .container header .my-cv {
   margin: auto 50px auto auto;
 }
 
-html .container header .my-cv .cv-link-mobile,
 body .container header .my-cv .cv-link-mobile {
   position: relative;
   width: 300%;
@@ -68,7 +69,6 @@ body .container header .my-cv .cv-link-mobile {
   cursor: pointer;
 }
 
-html .container header .my-cv .cv-link-mobile span,
 body .container header .my-cv .cv-link-mobile span {
   position: absolute;
   top: 35%;
@@ -77,12 +77,10 @@ body .container header .my-cv .cv-link-mobile span {
           transform: skew(30deg);
 }
 
-html .container header .my-cv .cv-link,
 body .container header .my-cv .cv-link {
   display: none;
 }
 
-html .container .toggle-button-day-mode,
 body .container .toggle-button-day-mode {
   z-index: 100;
   width: 60px;
@@ -100,12 +98,10 @@ body .container .toggle-button-day-mode {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html .container .modalWindowCV,
 body .container .modalWindowCV {
   display: none;
 }
 
-html .container main,
 body .container main {
   margin: 0 auto 158px;
   width: 80%;
@@ -115,70 +111,58 @@ body .container main {
   font-family: cursive;
 }
 
-html .container main .projects,
 body .container main .projects {
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-html .container main .projects .walkingCat,
 body .container main .projects .walkingCat {
   display: none;
 }
 
-html .container main .projects .flyingCat,
 body .container main .projects .flyingCat {
   display: none;
 }
 
-html .container main .projects .morpheus,
 body .container main .projects .morpheus {
   display: none;
 }
 
-html .container main .projects .card,
 body .container main .projects .card {
   width: 100%;
   border-radius: 50%;
   margin: 0 auto;
 }
 
-html .container main .projects .card img,
 body .container main .projects .card img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-html .container main .projects .card1,
 body .container main .projects .card1 {
   margin: 50px auto;
 }
 
-html .container main .projects .card1 .click-me,
 body .container main .projects .card1 .click-me {
   display: none;
 }
 
-html .container main .projects .card2,
 body .container main .projects .card2 {
   margin: 50px auto;
 }
 
-html .container main .projects .card2 .click-me,
 body .container main .projects .card2 .click-me {
   display: none;
 }
 
-html .container main .projects .card1Active,
 body .container main .projects .card1Active {
   -webkit-animation: zoomOutDown1 1.8s;
           animation: zoomOutDown1 1.8s;
   margin: 50px auto;
 }
 
-html .container main .projects .card1Active .click-me,
 body .container main .projects .card1Active .click-me {
   display: none;
 }
@@ -221,21 +205,18 @@ body .container main .projects .card1Active .click-me {
   }
 }
 
-html .container main .projects .card1Active img,
 body .container main .projects .card1Active img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-html .container main .projects .card2Active,
 body .container main .projects .card2Active {
   -webkit-animation: zoomOutDown2 1.8s;
           animation: zoomOutDown2 1.8s;
   margin: 50px auto;
 }
 
-html .container main .projects .card2Active .click-me,
 body .container main .projects .card2Active .click-me {
   display: none;
 }
@@ -278,31 +259,30 @@ body .container main .projects .card2Active .click-me {
   }
 }
 
-html .container main .projects .card2Active img,
 body .container main .projects .card2Active img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-html .container footer,
-body .container footer {
-  position: absolute;
-  bottom: 0;
+body footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 100%;
   height: 150px;
   background: #000;
 }
 
-html .container footer .cat-in-the-wall,
-body .container footer .cat-in-the-wall {
+body footer .cat-in-the-wall {
   display: none;
 }
 
-html .containerDark,
 body .containerDark {
   width: 100%;
-  min-height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   overflow: hidden;
   background: #111111fd;
   color: #cfcfcf;
@@ -310,7 +290,6 @@ body .containerDark {
   transition: 1s;
 }
 
-html .containerDark header,
 body .containerDark header {
   width: 100%;
   height: 150px;
@@ -319,7 +298,6 @@ body .containerDark header {
           box-shadow: 0px 0px 30px 0px #cfcfcf;
 }
 
-html .containerDark header img,
 body .containerDark header img {
   width: 150px;
   -webkit-transform: rotate(90deg) translateX(-10px);
@@ -328,7 +306,6 @@ body .containerDark header img {
   float: left;
 }
 
-html .containerDark header .my-cv,
 body .containerDark header .my-cv {
   text-align: end;
   width: 100px;
@@ -336,7 +313,6 @@ body .containerDark header .my-cv {
   margin: auto 50px auto auto;
 }
 
-html .containerDark header .my-cv .cv-link-mobile,
 body .containerDark header .my-cv .cv-link-mobile {
   position: relative;
   width: 300%;
@@ -352,7 +328,6 @@ body .containerDark header .my-cv .cv-link-mobile {
   cursor: pointer;
 }
 
-html .containerDark header .my-cv .cv-link-mobile span,
 body .containerDark header .my-cv .cv-link-mobile span {
   position: absolute;
   top: 35%;
@@ -361,12 +336,10 @@ body .containerDark header .my-cv .cv-link-mobile span {
           transform: skew(30deg);
 }
 
-html .containerDark header .my-cv .cv-link,
 body .containerDark header .my-cv .cv-link {
   display: none;
 }
 
-html .containerDark .toggle-button-night-mode,
 body .containerDark .toggle-button-night-mode {
   z-index: 100;
   width: 60px;
@@ -383,12 +356,10 @@ body .containerDark .toggle-button-night-mode {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html .containerDark .modalWindowCV,
 body .containerDark .modalWindowCV {
   display: none;
 }
 
-html .containerDark main,
 body .containerDark main {
   margin: 0 auto 158px;
   width: 80%;
@@ -398,70 +369,58 @@ body .containerDark main {
   font-family: cursive;
 }
 
-html .containerDark main .projects,
 body .containerDark main .projects {
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-html .containerDark main .projects .walkingCat,
 body .containerDark main .projects .walkingCat {
   display: none;
 }
 
-html .containerDark main .projects .flyingCat,
 body .containerDark main .projects .flyingCat {
   display: none;
 }
 
-html .containerDark main .projects .morpheus,
 body .containerDark main .projects .morpheus {
   display: none;
 }
 
-html .containerDark main .projects .card,
 body .containerDark main .projects .card {
   width: 100%;
   border-radius: 50%;
   margin: 0 auto;
 }
 
-html .containerDark main .projects .card img,
 body .containerDark main .projects .card img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-html .containerDark main .projects .card1,
 body .containerDark main .projects .card1 {
   margin: 50px auto;
 }
 
-html .containerDark main .projects .card1 .click-me,
 body .containerDark main .projects .card1 .click-me {
   display: none;
 }
 
-html .containerDark main .projects .card2,
 body .containerDark main .projects .card2 {
   margin: 50px auto;
 }
 
-html .containerDark main .projects .card2 .click-me,
 body .containerDark main .projects .card2 .click-me {
   display: none;
 }
 
-html .containerDark main .projects .card1Active,
 body .containerDark main .projects .card1Active {
   -webkit-animation: zoomOutDown1 1.8s;
           animation: zoomOutDown1 1.8s;
   margin: 50px auto;
 }
 
-html .containerDark main .projects .card1Active .click-me,
 body .containerDark main .projects .card1Active .click-me {
   display: none;
 }
@@ -485,21 +444,18 @@ body .containerDark main .projects .card1Active .click-me {
   }
 }
 
-html .containerDark main .projects .card1Active img,
 body .containerDark main .projects .card1Active img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-html .containerDark main .projects .card2Active,
 body .containerDark main .projects .card2Active {
   -webkit-animation: zoomOutDown2 1.8s;
           animation: zoomOutDown2 1.8s;
   margin: 50px auto;
 }
 
-html .containerDark main .projects .card2Active .click-me,
 body .containerDark main .projects .card2Active .click-me {
   display: none;
 }
@@ -523,24 +479,22 @@ body .containerDark main .projects .card2Active .click-me {
   }
 }
 
-html .containerDark main .projects .card2Active img,
 body .containerDark main .projects .card2Active img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-html .containerDark footer,
-body .containerDark footer {
-  position: absolute;
-  bottom: 0;
+body footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 100%;
   height: 150px;
   background: #000;
 }
 
-html .containerDark footer .cat-in-the-wall,
-body .containerDark footer .cat-in-the-wall {
+body footer .cat-in-the-wall {
   display: none;
 }
 /*# sourceMappingURL=mobile_style.css.map */
